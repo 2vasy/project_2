@@ -24,3 +24,35 @@ const movieDB = {
     ]
 };
 
+const prAdv = document.querySelectorAll('.promo__adv img'),
+      prBg = document.querySelector('.promo__bg'),
+      prGenre = prBg.querySelector('.promo__genre'),
+      prList = document.querySelector('.promo__interactive-list');
+//1)
+//      prAdv.forEach(function (item) {
+//        item.remove();
+//     });  '   
+
+prAdv.forEach(item => {
+    item.remove();
+});     
+
+//2)
+prGenre.textContent = 'драма';
+
+
+//3)
+prBg.style.backgroundImage = 'url(../img/bg.jpg)'; //  or ("img/bg.jp")
+      
+//4)
+
+prList.innerHTML = "";
+
+movieDB.movies.sort();
+//+5)
+movieDB.movies.forEach((film, i) => {
+    prList.innerHTML += `
+       <li class="promo__interactive-item">${i + 1} ${film}  
+       </li>
+    `;
+});
