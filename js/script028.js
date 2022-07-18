@@ -1,6 +1,6 @@
 
 
-const btns = document.querySelector('button'),
+const btns = document.querySelectorAll('button'),
       overlay = document.querySelector('.overlay');
 
 
@@ -51,7 +51,7 @@ const btns = document.querySelector('button'),
 
 
  btns.forEach(btn => {
-      btn.addEventListener('click', deleteElement);
+      btn.addEventListener('click', deleteElement, {once: true});
  });
       
 

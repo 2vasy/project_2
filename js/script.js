@@ -42,7 +42,7 @@ prGenre.textContent = 'драма';
 
 
 //3)
-prBg.style.backgroundImage = 'url(../img/bg.jpg)'; //  or ("img/bg.jp")
+prBg.style.backgroundImage = 'url(img/bg1.jpg)'; //  or ("img/bg.jp")
       
 //4)
 
